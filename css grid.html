@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>CSS GRID</title>
+	<style>
+		*{
+
+			margin: 0;padding: 0;box-sizing: border-box;
+		}
+		main{
+			width: 90%;
+			margin: 50px auto;
+			border: 1px solid black;
+			color: white;
+			display: grid;
+			grid-template-rows: 150px 150px; /*(2,150px)*/
+			grid-template-columns: /*150px 150px 150px; fraction unit use to remove gap 150px 150px 1fr;*/ 1fr 1fr 1fr;/*divide in equal position*/ /*shorthand repeat(3, 1fr) only same value*/
+			/*gap b/w rows*/
+
+		grid-row-gap: 20px;
+		grid-column-gap: 20px; /* same value row and column use shorthand grid gap: 20px*/
+
+		/*How to change position of grid elements*/
+		/*explicit grid or jisko define nhi kiya use bolte hai inplicit grid* propery use*/
+
+		grid-auto-rows:150px ;
+
+/*define to one hi row ki thi par this property is used jab extra use ho to whe row ki height bda deta hai. useke baad bhi*/
+		}
+
+		.div1{background: red;}
+		.div2{background: blue;
+			grid-column-start: 1; grid-column-end: 4; /*1/-1*/ 
+		}
+		.div3{background: green;}
+		.div4{background: yellow;}
+		.div5{background: orange;
+grid-row-start: 1;  grid-row-end: 2; /* shorthand grid row: 1/2; */
+grid-column-start: 2;  grid-column-end: 4; /* shorthand grid column: 2/4; */
+
+		}
+
+		.div6{background: black;}
+	</style>
+</head>
+<body>
+	<main>
+		<div class="div1" >div1 </div>
+		<div class="div2" >div2 </div>
+		<div class="div3" >div3 </div>
+		<div class="div4" >div4 </div>
+		<div class="div5" >div5 </div>
+		<div class="div6" >div6 </div>
+
+
+	</main>
+
+</body>
+</html>
